@@ -1,0 +1,52 @@
+#static-gallery {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+
+
+#static-gallery-grid {
+
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 0.5rem;
+  counter-reset: nrimag 0;
+
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    text-align: center;
+    counter-increment: nrimag 1; /* nrimag +=1 */
+  }
+
+  figcaption::before {
+    content: counter(nrimag, upper-alpha) ")";
+  }
+
+
+}
+#generated-image img:hover {
+  position: relative;
+  animation: image-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes image-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+
+

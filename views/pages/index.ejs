@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <%- include("../fragments/head.ejs") %>
+
+
+    <title>Document</title>
+</head>
+<body>
+
+
+<%- include("../fragments/header.ejs") %>
+
+<main>
+
+
+    <h1> MAIN PAGE (pages/index)</h1>
+
+    <div id="page-grid">
+        <section class="cell" id="z-cell-8">
+            <h3>New Products</h3>
+            <p>Static Gallery</p>
+
+
+            <div id="static-gallery-grid">
+                <%
+                let nrImages = 0;
+                        for(let imag of locals.images){
+                    nrImages++;
+                    if (nrImages >= 11)
+                        break; %>
+
+                <figure>
+                    <picture id="generated-image">
+                        <source srcset="<%- imag.small_image_location %>" media="(max-width : 750px)">
+                        <source srcset="<%- imag.medium_image_location %>" media="max-width: 1250px">
+                        <img src="<%- imag.image_location %>" alt="poza-fotbalist">
+                    </picture>
+                    <figcaption><%- imag.description %></figcaption>
+                </figure>
+                <%
+                }
+                %>
+            </div>
+
+        </section>
+
+
+        <section class="cell" id="z-cell-1">
+            <h3>Z-CELL-1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a nulla lacinia, vestibulum mauris vel,
+                mollis
+                nisl. Suspendisse facilisis nisl vel tincidunt egestas. Interdum et malesuada fames ac ante ipsum primis
+                in
+                faucibus. Suspendisse in risus ut nulla luctus varius. Sed vel condimentum enim. Aenean eget nisl felis.
+                Donec blandit sit amet odio quis efficitur. Donec vel venenatis nulla, quis cursus tortor. Morbi ut quam
+                in
+                mi lacinia condimentum. Nam non aliquam arcu. Nunc sed lorem sollicitudin, consequat tortor in, suscipit
+                tortor. Pellentesque et consequat erat. Quisque pellentesque velit eget tincidunt laoreet. Aliquam
+                ultricies
+                justo at purus semper vehicula. Nullam viverra ipsum quis augue convallis, egestas commodo nulla
+                gravida.
+                Praesent scelerisque, lectus quis faucibus fringilla, lectus augue congue dui, sed hendrerit leo mi in
+                tellus.
+
+            </p>
+        </section>
+
+
+        <section class="cell" id="z-cell-2">
+            <h3>Z-CELL-2</h3>
+            <p>Nullam dapibus, eros quis suscipit rhoncus, libero eros pulvinar neque, eget fringilla mauris eros cursus
+                libero. Nullam at blandit dui. Curabitur faucibus, orci at rhoncus lobortis, massa leo viverra enim, sit
+                amet semper dui odio consectetur eros. Nam ut ligula sed leo pretium cursus nec in lorem. Etiam lacinia
+                varius congue. Donec congue urna id risus aliquam, nec molestie nulla aliquam. Praesent porta justo ut
+                enim
+                posuere dapibus. Nam at magna tellus. Nam mollis tortor urna, eget laoreet ex aliquet sed. Etiam a neque
+                non
+                urna viverra commodo vitae eu dolor. Suspendisse potenti. Nunc et ultrices velit. Vestibulum aliquet
+                tempus
+                tortor. Praesent rutrum sit amet sem et dignissim. Integer pulvinar pretium feugiat. Morbi nisi sem,
+                interdum ut justo in, varius congue est.
+            </p>
+        </section>
+
+
+        <section class="cell" id="z-cell-3">
+            <h3>Z-CELL-3</h3>
+            <p>Aenean imperdiet purus ac aliquam egestas. Sed placerat nec sapien sit amet auctor. Praesent in luctus
+                sem,
+                ac interdum dolor. Aliquam ex ante, tincidunt lobortis orci ac, faucibus egestas arcu. Nam at velit
+                lacus.
+                Vivamus ullamcorper neque et ipsum finibus elementum. Duis porta metus ut est posuere, vitae dapibus
+                lacus
+                gravida. Aenean condimentum nunc tincidunt purus luctus scelerisque. Donec in massa sit amet neque
+                auctor
+                pulvinar. Aenean at enim turpis. Fusce vestibulum justo nec ex ornare tempus. Etiam congue hendrerit
+                odio et
+                fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac auctor est.
+            </p>
+        </section>
+
+        <section class="cell" id="z-cell-4">
+            <h3>Z-CELL-4</h3>
+            <p>Sed ultricies nulla felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus
+                mus. Etiam eros metus, auctor eu tellus a, viverra dapibus urna. Aenean dolor nisl, rutrum quis felis
+                in,
+                ultricies condimentum lacus. Suspendisse vitae nisl ex. Nunc id dignissim nulla. Cras dignissim erat non
+                augue egestas scelerisque. Curabitur commodo dolor ut ex sagittis cursus. In feugiat imperdiet leo, quis
+                malesuada sem blandit in. Cras odio ipsum, viverra sagittis egestas quis, tincidunt eget mauris.
+                Phasellus
+                et vulputate velit. Nulla tellus lorem, pulvinar facilisis finibus ultricies, sagittis nec justo. Nulla
+                ac
+                magna in risus dapibus luctus non eget libero.
+
+            </p>
+        </section>
+
+        <section class="cell" id="z-cell-5">
+            <h3>Z-CELL-5</h3>
+            <p>Nullam scelerisque molestie magna ut ornare. Donec malesuada et arcu eget pharetra. Etiam ultrices
+                consequat
+                hendrerit. Duis placerat laoreet ex, nec suscipit quam bibendum in. Sed tempor leo ut venenatis mattis.
+                Praesent id congue tortor, vitae tincidunt felis. Mauris a molestie ipsum. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac turpis egestas. Nunc hendrerit turpis ut dictum
+                accumsan.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+            </p>
+        </section>
+
+
+        <section class="cell" id="z-cell-6">
+            <h3>Z-CELL-6</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu cursus augue. Nullam blandit
+                condimentum
+                efficitur. Morbi dapibus lacus nec ipsum ullamcorper lobortis. Donec accumsan leo odio, eget suscipit
+                ipsum
+                tincidunt in. Maecenas cursus nibh sed enim mollis gravida. Donec a tristique lectus, in tempor tellus.
+                Mauris nec sollicitudin enim. Vivamus lobortis, mi vel molestie luctus, quam ipsum auctor eros, vitae
+                mollis
+                ante sem non elit. In ornare tellus vulputate justo laoreet fermentum. Nullam pretium fermentum quam a
+                ullamcorper. Sed congue et diam a placerat. Quisque non ex diam.
+            </p>
+        </section>
+
+
+        <section class="cell" id="z-cell-7">
+            <h3>Z-CELL-7</h3>
+            <p>Aenean pulvinar elementum erat eget hendrerit. Ut quis lorem sit amet nibh commodo efficitur consectetur
+                sed
+                tellus. Donec rhoncus arcu in purus elementum, commodo placerat erat faucibus. Duis sed tellus in turpis
+                pretium iaculis. Sed consectetur eu tortor vitae sodales. Fusce dapibus lectus vel dignissim hendrerit.
+                Proin pulvinar, lorem sit amet maximus blandit, neque erat cursus metus, eu suscipit libero dui et
+                ipsum.
+                Duis imperdiet sem erat, vitae cursus magna rutrum eget. Suspendisse potenti. Praesent ipsum mauris,
+                sodales
+                ut vehicula at, porttitor quis nisi. In luctus eleifend lectus. Suspendisse quis dignissim erat.
+                Suspendisse
+                fringilla elit sit amet velit finibus ultrices. Duis justo turpis, ullamcorper a orci commodo,
+                sollicitudin
+                bibendum justo. Aenean sed sollicitudin nisi.
+
+            </p>
+        </section>
+
+        <!--        <section class="cell" id="z-cell-8">
+                    <h3>Z-CELL-8</h3>
+                    <p>Aenean pulvinar elementum erat eget hendrerit. Ut quis lorem sit amet nibh commodo efficitur consectetur
+                        sed
+                        tellus. Donec rhoncus arcu in purus elementum, commodo placerat erat faucibus. Duis sed tellus in turpis
+                        pretium iaculis. Sed consectetur eu tortor vitae sodales. Fusce dapibus lectus vel dignissim hendrerit.
+                        Proin pulvinar, lorem sit amet maximus blandit, neque erat cursus metus, eu suscipit libero dui et
+                        ipsum.
+                        Duis imperdiet sem erat, vitae cursus magna rutrum eget. Suspendisse potenti. Praesent ipsum mauris,
+                        sodales
+                        ut vehicula at, porttitor quis nisi. In luctus eleifend lectus. Suspendisse quis dignissim erat.
+                        Suspendisse
+                        fringilla elit sit amet velit finibus ultrices. Duis justo turpis, ullamcorper a orci commodo,
+                        sollicitudin
+                        bibendum justo. Aenean sed sollicitudin nisi.
+
+                    </p>
+                </section>-->
+
+    </div>
+
+
+</main>
+
+
+<%- include("../fragments/footer.ejs") %>
+
+
+<script src="../../resources/js/toggleColors.js"></script>
+<script src="../../resources/js/products.js"></script>
+
+</body>
+
+
+</html>

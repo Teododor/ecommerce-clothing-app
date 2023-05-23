@@ -1,0 +1,97 @@
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.products-grid {
+  display: grid;
+  @media screen and (min-width: 350px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  @media screen and (min-width: 750px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  @media screen and (min-width: 1250px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  .product {
+    border-radius: 2rem;
+    box-shadow: 0px 0px 0.8rem 0.3rem grey;
+    overflow: hidden;
+
+    h3 {
+      background-color: #87CEEB;
+      text-align: center;
+      margin-top: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      a {
+        color: black;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    figure {
+      text-align: center;
+
+      img {
+        border: 1px solid grey;
+      }
+    }
+
+    .prod-info {
+      display: flex;
+      background-color: lightgrey;
+
+      p {
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      &.category {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+  }
+
+}
+
+.prod-info {
+  background-color: #8B78E6;
+  padding: 0.2rem;
+  box-shadow: 0px 0px 0.5rem 0.15rem grey;
+}
+
+.product {
+  position: relative;
+}
+
+.select-basket {
+  display: inline-block;
+  background-color: #0079ee;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.3rem;
+  border: 1px solid transparent;
+}
+
+.select-basket:hover {
+  background-color: #00345e;
+  border: 1px solid black;
+}

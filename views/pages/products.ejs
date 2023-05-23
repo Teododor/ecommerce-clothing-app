@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PRODUSE</title>
+    <%- include("../fragments/head.ejs") %>
+    <link rel="stylesheet" href="resources/scss/products.css" type="text/css"/>
+
+ <!--   <script type="text/javascript" src=/resources/javascript/products.js></script>-->
+
+</head>
+
+<body>
+
+<%- include("../fragments/header.ejs") %>
+
+<main>
+
+    <div id="products-filters">
+        <div>
+
+            <label id="inp-category-name">Write your name here
+                <input type="text"
+                       id="name-input">
+            </label>
+
+            <label id="inp-category-price">Min Price:
+                <input type="range"
+                       id="price-input"
+                       value="0"
+                       min="0"
+                       max="25">
+
+                <span id="infoRange">(0)</span>
+
+            </label>
+
+            <label id="inp-quality-type"> Simple Select
+                <select id="usage-category">
+
+                    <option id="select-all" selected value="all">all</option>
+
+                    <%
+                    for(let option of locals.usage) { %>
+                        <option value="<%= option.unnest %>"> <%= option.unnest %></option>
+                    <% } %>
+
+                </select>
+            </label>
+
+            <label id="inp-color-type">Color Select
+                <label id="color-category">
+
+                </label>
+
+                <%
+                for(let option of locals.colors){ %>
+                    <span id="color-category">
+                    <label for="<%= option.unnest %>">
+                    </label>
+                    <input type="checkbox" id="<%= option.unnest %>" value="<%= option.unnest %>">
+                    <%= option.unnest %>
+                </span>
+
+                <% }
+                %>
+
+            </label>
+
+
+        </div>
+
+        <div>
+            <button id="filter">Filter</button>
+            <button id="reset">Reset</button>
+            <br>
+            <button id="sortAlphabeticalButton">Sort by Price and Alphabetical</button>
+            <button id="sortUnalphabeticalButton">Sort reverse by Price and Alphabetical</button>
+        </div>
+
+
+        <div>
+            <label for="date">Select Delivery Date: </label>
+            <input type="date" id="date" name="date">
+        </div>
+    </div>
+
+
+    <section id="products">
+        <h2>Products</h2>
+
+        <div class="products-grid">
+
+            <% for(let product of locals.products){ %>
+                <article class="product">
+
+                    <h3 class="name"> Name : <a href="/products/<%- product.id %>">
+                            <span class="val-name"> <%- product.name %></span>
+                        </a>
+                    </h3>
+
+                    <div class="prod-info">
+                        <p class="price">Price: <span class="price-info"><%- product.price %></span></p>
+                        <p class="color">Color: <span class="color-info"><%- product.color %></span></p>
+                        <p class="weight">Weight: <span class="weight-info"><%- product.weight %></span></p>
+                    </div>
+
+                    <p class="category">Availabe-Sizes <span
+                                class="available-sizes-info"> <%- product.available_sizes %></span></p>
+                    <p class="category">
+                        <time datetime="<%- product.add_date %>">Date:
+                            <%= product.add_date.toLocaleDateString("en-US", {
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric"
+                            })
+                                    .replace(/\b\w/g, l => l.toUpperCase()) %>
+                        </time>
+
+                    </p>
+
+                    <p class="category"> Usage :
+
+                        <span class="category-quality"> <%= product.usage %></span>
+                    </p>
+
+                    <figure>
+                        <a href="/product/ <%- product.id %>">
+                            <img src="/resources/images/products/<%- product.image %>.png"
+                                 alt="[imagine <%- product.id %>]">
+                        </a>
+                    </figure>
+
+                    <label class="select-basket">
+                        Selecteaza: <br/>
+                        <input type="checkbox" class="select-item-basket" value="<%- product.id %>" autocomplete="off">
+                    </label>
+
+                </article>
+            <% } %>
+
+        </div>
+    </section>
+
+</main>
+
+</body>
+
+
+<%- include("../fragments/footer.ejs") %>
+
+<script src="../../resources/js/toggleColors.js"></script>
+<script src="../../resources/js/products.js"></script>
+
+
+</html>

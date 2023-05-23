@@ -1,0 +1,44 @@
+{
+  "base_location" : "resources/images/errors",
+  "default_error": {
+    "title" : "Error!!!",
+    "text" : "An error has occured",
+    "image" : "interdiction.png"
+  },
+  "errors_info" : [
+    {
+      "identifier" : 404,
+      "status" : true,
+      "title" : "Error 404",
+      "text" : "Error 404. What you are searching for is not on the server",
+      "image" : "error404.png"
+    },
+    {
+      "identifier" : 403,
+      "status" : true,
+      "title" : "Error 403",
+      "text" : "Error 403. You do not have the permission to access"
+    },
+    {
+      "identifier": 1,
+      "status" :false,
+      "title" : "The site is currently in working",
+      "text": "We are working",
+      "image" : "interdiction.png"
+    },
+    {
+      "identifier" : 2,
+      "status" : false,
+      "title" : "DataBase Error",
+      "text" : "Please Come back later",
+      "image" : "interdiction.png"
+    },
+    {
+      "identifier" : 3,
+      "status" : false,
+      "title" : "Wrong inputs",
+      "text" : "Please check again your inputs",
+      "image" : "interdiction.png"
+    }
+  ]
+}

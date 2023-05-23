@@ -1,0 +1,51 @@
+@media screen and (min-width: 1000px) {
+  #page-grid {
+    display: grid;
+    border: 0.5px solid black;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "z-cell-1 z-cell-1 z-cell-1 z-cell-1"
+                           "z-cell-2 z-cell-3 z-cell-3 z-cell-4"
+                           "z-cell-5 z-cell-5 z-cell-6 z-cell-6"
+                           "z-cell-7 z-cell-7 z-cell-6 z-cell-6"
+                           "z-cell-8 z-cell-8 z-cell-8 z-cell-8";
+/*    > * {
+      border: 2px solid red;
+      margin: 0;
+      padding: 0;
+    }*/
+  }
+}
+
+#z-cell-1 {
+  grid-area: z-cell-1;
+}
+
+#z-cell-2 {
+  grid-area: z-cell-2;
+}
+
+#z-cell-3 {
+  grid-area: z-cell-3;
+}
+
+#z-cell-4 {
+  grid-area: z-cell-4;
+}
+
+#z-cell-5 {
+  grid-area: z-cell-5;
+}
+
+#z-cell-6 {
+  grid-area: z-cell-6;
+}
+
+#z-cell-7 {
+  grid-area: z-cell-7;
+}
+
+#z-cell-8 {
+  grid-area: z-cell-8;
+}

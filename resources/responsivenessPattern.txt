@@ -1,0 +1,4 @@
+< 750 px -> SMALL SCREEN
+> 750 px < 1000 px -> MEDIUM SCREEN
+> 1000 px -> LARGE SCREEN
+

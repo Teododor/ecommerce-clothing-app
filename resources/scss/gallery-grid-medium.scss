@@ -1,0 +1,11 @@
+@media screen and (min-width: 750px) and (max-width: 1250px) {
+  #static-gallery-grid {
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+    counter-reset: nrimag 0;
+  }
+}

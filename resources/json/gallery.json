@@ -1,0 +1,65 @@
+{
+  "gallery_location" : "resources/images/staticGallery",
+  "images" : [
+    {
+      "image_location" : "galleryPhoto1.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto2.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto3.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto4.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto5.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto6.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto7.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto8.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto9.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto10.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto11.png",
+      "title" : "",
+      "description" : ""
+    },
+    {
+      "image_location" : "galleryPhoto12.png",
+      "title" : "",
+      "description" : ""
+    }
+  ]
+}
